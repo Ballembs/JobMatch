@@ -1,0 +1,31 @@
+<plugin name='attachmentable' version='0.3.0' grailsVersion='1.1 &gt; *'>
+  <author>Mihai Cazacu</author>
+  <authorEmail>cazacugmihai@gmail.com</authorEmail>
+  <title>Attachmentable Plugin</title>
+  <description>A plugin that allows you to add attachments to domain classes in a generic manner.</description>
+  <documentation>http://grails.org/plugin/attachmentable</documentation>
+  <type>AttachmentableGrailsPlugin</type>
+  <resources>
+    <resource>com.macrobit.grails.plugins.attachmentable.controllers.AttachmentableController</resource>
+    <resource>com.macrobit.grails.plugins.attachmentable.domains.Attachment</resource>
+    <resource>com.macrobit.grails.plugins.attachmentable.domains.AttachmentLink</resource>
+    <resource>com.macrobit.grails.plugins.attachmentable.services.AttachmentableService</resource>
+    <resource>com.macrobit.grails.plugins.attachmentable.taglibs.AttachmentsTagLib</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='org.compass-project' name='compass' version='2.2.0' />
+      <dependency group='org.apache.tika' name='tika-parsers' version='1.1' />
+    </compile>
+  </dependencies>
+  <plugins />
+  <runtimePluginRequirements>
+    <plugin name='hibernate' version='1.1 &gt; *' />
+  </runtimePluginRequirements>
+  <behavior />
+</plugin>
