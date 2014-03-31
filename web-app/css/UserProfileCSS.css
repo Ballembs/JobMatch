@@ -1,0 +1,163 @@
+@CHARSET "ISO-8859-1";
+.container
+{
+}
+.nav-tabs
+{
+	border: 1px solid #dddddd;
+}
+td
+{
+	width: 113px;
+}
+body
+{
+	background-color: whitesmoke;		
+}
+.masthead
+{
+	background-color: whitesmoke;
+}
+.UserFormDiv
+{	
+	padding: 20px;
+	border: beige;
+	border-style: ridge;
+	width: auto;
+	margin-top: 15px;
+	border: 1px solid #dddddd;
+	background-color: white;	
+}
+
+.jumbotron {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#Header .title
+{
+	margin-top: 3%;
+	font-size: 30px;
+}
+
+label
+{
+	font: 81.25% arial, helvetica, sans-serif;
+	color: #222;
+	line-height: 1;
+	direction: ltr;
+	font-weight: bold;
+}
+.form-control
+{
+	-webkit-appearance: none;
+	appearance: none;
+	display: inline-block;
+	height: 29px;
+	margin: 0;
+	padding: 0 8px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-top: 1px solid #c0c0c0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	font: 81.25% arial, helvetica, sans-serif;
+}
+
+button,input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.formCtrl
+{
+	margin: 10px;
+}
+
+.form-control
+{
+	width: 75%
+}
+
+.title
+{
+	text-align: center;
+	font-family: 'Open Sans', arial, helvetica, sans-serif;	
+	
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: 'Open Sans', arial, helvetica, sans-serif;	
+	color: #222;
+	font-size: 1.54em;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0 0 .46em;
+}
+body h4
+{
+	font: 100% arial, helvetica, sans-serif;
+	font-weight: 300;
+}
+body ::-webkit-scrollbar {
+	height: 16px;
+	width: 16px;
+	overflow: auto;
+	
+}
+clear-fix
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: '.';
+	clear: both;
+	height: 0;
+}
+
+.left
+{
+	float: left;
+	width: 40%
+}
+
+.right 
+{
+	float: right;
+	padding-top: 20px;
+	text-align: center;
+	font-family: 'Open Sans', arial, helvetica, sans-serif;
+	color: #737373;
+	margin-bottom: 15px;
+	width: auto
+	
+}
+
+html {
+	font: 81.25% arial, helvetica, sans-serif;
+	color: #333;
+	line-height: 1;
+	direction: ltr;
+}
+
+.btn-upload
+{
+	background-color: lightgrey;
+}
+
+.show-section
+{
+	width: 50%;
+	margin-left: 20%;
+}
+
+.homeTd
+{
+	vertical-align: -webkit-baseline-middle;
+	text-align: left
+}

@@ -41,6 +41,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
 		mavenRepo "http://repo.spring.io/milestone/"
+		mavenRepo "http://download.java.net/maven/2/"
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -60,6 +61,8 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
+		
+		compile ":h2:0.2.6"
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"
@@ -68,7 +71,9 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.1"
 		compile ":spring-security-core:2.0-RC2"
 		compile ":kickstart-with-bootstrap:1.1.0"
-		compile ":attachmentable:0.3.0"
+		compile ":mail:1.0.1"
+		compile ":pdf-viewer:0.1"
+//		compile ":multi-select:0.2"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"

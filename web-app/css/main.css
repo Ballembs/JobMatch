@@ -9,7 +9,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* BASE LAYOUT */
-
+tr
+{
+	width: 200px
+}
 html {
 	background-color: #ddd;
 	background-image: -moz-linear-gradient(center top, #aaa, #ddd);

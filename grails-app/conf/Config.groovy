@@ -43,10 +43,6 @@ grails.views.default.codec = "html"
 // The default scope for controllers. May be prototype, session or singleton.
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
-grails.attachmentable.maxInMemorySize = 1024
-grails.attachmentable.maxUploadSize = 1024000000
-grails.attachmentable.uploadDir = YOUR_USER_HOME/APP_NAME
-grails.attachmentable.poster.evaluator = { getPrincipal() }
 
 // GSP settings
 grails {
@@ -130,6 +126,58 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/js/**':                      ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/**/css/**':                     ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/**/images/**':                  ['IS_AUTHENTICATED_ANONYMOUSLY'],
-	'/**/favicon.ico':                ['IS_AUTHENTICATED_ANONYMOUSLY']
+	'/**/favicon.ico':                ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	'/Home/index':                    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	'/UserProfile/index' :            ['IS_AUTHENTICATED_FULLY'],
+	'/dbconsole/*':                   ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	'/pdfViewer/*':                   	  ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
+//Mail configurations
+grails {
+	mail {
+	  host = "smtp.gmail.com"
+	  port = 465
+	  username = "bsb.balu@gmail.com"
+	  password = "threaddy1234"
+	  props = ["mail.smtp.auth":"true",
+			   "mail.smtp.socketFactory.port":"465",
+			   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+			   "mail.smtp.socketFactory.fallback":"false"]
+	}
+ }
+
+fckeditor {
+	upload {
+		basedir = "/tmp/storagearea/"
+		baseurl = "/uploads/"
+		overwrite = false
+		link {
+			browser = true
+			upload = false
+			allowed = []
+			denied = ['html', 'htm', 'php', 'php2', 'php3', 'php4', 'php5',
+					  'phtml', 'pwml', 'inc', 'asp', 'aspx', 'ascx', 'jsp',
+					  'cfm', 'cfc', 'pl', 'bat', 'exe', 'com', 'dll', 'vbs', 'js', 'reg',
+					  'cgi', 'htaccess', 'asis', 'sh', 'shtml', 'shtm', 'phtm']
+		}
+		image {
+			browser = true
+			upload = true
+			allowed = ['jpg', 'gif', 'jpeg', 'png']
+			denied = []
+		}
+		flash {
+			browser = false
+			upload = false
+			allowed = ['swf']
+			denied = []
+		}
+		media {
+			browser = false
+			upload = false
+			allowed = ['mpg','mpeg','avi','wmv','asf','mov']
+			denied = []
+		}
+	}
+}

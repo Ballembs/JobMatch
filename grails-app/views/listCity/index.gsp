@@ -6,6 +6,7 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'listCity.label', default: 'ListCity')}" />
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'UserProfileCSS.css')}" type="text/css">
 	<title><g:message code="default.index.label" args="[entityName]" /></title>
 </head>
 

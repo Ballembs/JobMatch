@@ -1,10 +1,9 @@
 
 <%@ page import="kickstart._DemoPage" %>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: '_DemoPage.label', default: '_DemoPage')}" />
 	<title><g:message code="default.show.label" args="[entityName]" /></title>
@@ -28,13 +27,6 @@
 				<td valign="top" class="name"><g:message code="_DemoPage.myDate.label" default="My Date" /></td>
 				
 				<td valign="top" class="value"><g:formatDate date="${_DemoPageInstance?.myDate}" /></td>
-				
-			</tr>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="_DemoPage.myDate2.label" default="My Date 2" /></td>
-				
-				<td valign="top" class="value"><g:formatDate date="${_DemoPageInstance?.myDate2}" /></td>
 				
 			</tr>
 		
@@ -138,6 +130,13 @@
 				<td valign="top" class="name"><g:message code="_DemoPage.lastUpdated.label" default="Last Updated" /></td>
 				
 				<td valign="top" class="value"><g:formatDate date="${_DemoPageInstance?.lastUpdated}" /></td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="_DemoPage.myDate2.label" default="My Date2" /></td>
+				
+				<td valign="top" class="value"><g:formatDate date="${_DemoPageInstance?.myDate2}" /></td>
 				
 			</tr>
 		

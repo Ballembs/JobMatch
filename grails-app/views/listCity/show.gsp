@@ -6,6 +6,7 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'listCity.label', default: 'ListCity')}" />
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'UserProfileCSS.css')}" type="text/css">
 	<title><g:message code="default.show.label" args="[entityName]" /></title>
 </head>
 
@@ -29,7 +30,7 @@
 				<td valign="top" style="text-align: left;" class="value">
 					<ul>
 					<g:each in="${listCityInstance.userProfile}" var="u">
-						<li><g:link controller="userProfile" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></li>
+						<li><g:link controller="profile" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></li>
 					</g:each>
 					</ul>
 				</td>

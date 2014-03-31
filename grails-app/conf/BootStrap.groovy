@@ -3,6 +3,9 @@ import com.KickStart.security.User
 import com.KickStart.security.UserRole
 import com.Helper.ListIndestry
 import com.Helper.ListCity
+import com.Helper.UGList
+import com.Helper.PGList
+import com.Helper.FunctionalArea
 
 class BootStrap {
 
@@ -10,6 +13,7 @@ class BootStrap {
 		def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
 		def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
 		def userRole1 = new Role(authority: 'ROLE_USER').save(flush: true)
+		def allPermitions = new Role(authority: 'permitAll').save(flush: true)
 		
 		def testUser = new User(username: 'me', password: 'password')
 		def testUser2 = new User(username: 'me2', password: 'password')
@@ -20,16 +24,21 @@ class BootStrap {
 		UserRole.create testUser, userRole, true
 		UserRole.create testUser1, adminRole, true
 		UserRole.create testUser2, userRole1,true
-		assert User.count() == 3
-		assert Role.count() == 2
-		assert UserRole.count() == 2
 		
 		def indestry = new ListIndestry(indestryName : 'Test1').save(flush: true)
 		def indestry2 = new ListIndestry(indestryName : 'Test2').save(flush: true)
 		
 		def city1 = new ListCity(cityName : 'Bangalore').save(flush: true)
 		def city2 = new ListCity(cityName : 'Hyderabad').save(flush: true)
+		def city3 = new ListCity(cityName : 'testdata').save(flush: true)
+		def city4 = new ListCity(cityName : 'testdata1').save(flush: true)
+		def city5 = new ListCity(cityName : 'testdata2').save(flush: true)
+		def city6 = new ListCity(cityName : 'testdata3').save(flush: true)
+		def city7 = new ListCity(cityName : 'acsd').save(flush: true)
 		
+		def ugQual = new UGList(ugName : "B.Tech").save(flush: true)
+		def pgQual = new PGList(pgName : "M.Tech").save(flush: true)
+		def functionalArea =  new FunctionalArea(functionalYear : "IT indestry").save(flush: true)
     }
     def destroy = {
     }

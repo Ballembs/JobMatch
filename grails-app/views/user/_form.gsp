@@ -34,19 +34,19 @@
 				</div>
 			</div>
 
-			<div class="${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
-				<label for="enabled" class="control-label"><g:message code="user.enabled.label" default="Enabled" /></label>
-				<div>
-					<bs:checkBox name="enabled" value="${userInstance?.enabled}" />
-					<span class="help-inline">${hasErrors(bean: userInstance, field: 'enabled', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')} ">
 				<label for="passwordExpired" class="control-label"><g:message code="user.passwordExpired.label" default="Password Expired" /></label>
 				<div>
 					<bs:checkBox name="passwordExpired" value="${userInstance?.passwordExpired}" />
 					<span class="help-inline">${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')}</span>
+				</div>
+			</div>
+
+			<div class="${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
+				<label for="enabled" class="control-label"><g:message code="user.enabled.label" default="Enabled" /></label>
+				<div>
+					<bs:checkBox name="enabled" value="${userInstance?.enabled}" />
+					<span class="help-inline">${hasErrors(bean: userInstance, field: 'enabled', 'error')}</span>
 				</div>
 			</div>
 

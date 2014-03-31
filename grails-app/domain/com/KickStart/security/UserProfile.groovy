@@ -1,6 +1,9 @@
 package com.KickStart.security
+
+import java.util.Date;
 import com.Helper.ListIndestry
 import com.Helper.ListCity
+
 /**
  * UserProfile
  * A domain class describes the data object and it's mapping to the database
@@ -28,36 +31,41 @@ class UserProfile extends User {
 	String currentLocation
 	String mobileNumber
 	String gender
-	
-	String jobType
 	String totalExperience
-	String function
 	String keySkils
-	String months
 	Date	dateCreated
 	Date	lastUpdated
-	byte[] resume
-	static attachmentable = true
 	ListIndestry currentIndestry
+	String qualification
+	String certification
+	String resumeTitle
+	byte[] uploadResume
+	
+	String toString() {
+		"$username"
+	};
 	static hasMany = [prefferedLocation : ListCity]
+	
+	
+	static	constraints = {
+		email(blank: false,email: true,unique: true)
+		firstName(nullable : true, blank: false)
+		lastName(nullable : true)
+		nationality(nullable : true,blank: false)
+		currentLocation(nullable : true,blank: false)
+		mobileNumber(nullable : true,blank: false,minSize: 10)
+		gender(nullable : true,inList: ["Male", "Female"])
+		qualification(nullable : true, inList: ['Not pursuing Graduation','BA','B.Arch','BCA','B.B.A','B.Com','B.Ed.','BDS','BHM','B.Pharma','B.Sc','B.Tech/B.E','LLB','MBBBS','Diploma','BVSC','Other'])
+		certification(nullable : true)
+		totalExperience(nullable : true)
+		keySkils(blank: false,nullable : true)
+		uploadResume(maxSize: 1024 * 1024 * 2)
+		resumeTitle(nullable : true)
+	}
     static	mapping = {
     }
     
-	static	constraints = {
-		email(blank: false,email: true,unique: true)
-		firstName(blank: false)
-		lastName()
-		nationality(blank: false)
-		currentLocation(blank: false)
-		mobileNumber(blank: false,minSize: 10)
-		gender(inList: ["Male", "Female"])
-		
-		totalExperience()
-		months()
-		jobType(blank: false)
-		keySkils(blank: false)
-		resume(nullable: true,maxSize: 132768)
-    }
+	
 	
 	/*
 	 * Methods of the Domain Class

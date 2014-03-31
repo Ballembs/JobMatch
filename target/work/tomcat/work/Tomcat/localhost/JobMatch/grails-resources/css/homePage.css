@@ -1,0 +1,58 @@
+@CHARSET "ISO-8859-1";
+
+.leftHome
+{
+	float: left;
+	width: 20%
+}
+
+.rightHome
+{
+	float: left;
+	padding: 20px;
+	font-family: 'Open Sans', arial, helvetica, sans-serif;
+	color: #737373;
+	margin-bottom: 15px;
+	width: auto
+}
+
+.rightHome h3
+{
+	font-size: inherit;
+}
+
+.rightHome td
+{
+	width: auto
+}
+.bpwSubHd
+{
+	margin-top: 10px;
+	box-shadow: 0px 0px 3px #888888;
+	font-family: serif;
+}
+
+.placeToWork
+{
+	margin-bottom: 10px
+}
+.bpwSubHd h3
+{
+	padding-left: 10px;
+	
+}
+.bpwHd
+{
+	font-size: medium;
+}
+td
+{
+	width: 155px;
+	padding: 10px;
+}
+
+.bpw
+{
+	font-family: sans-serif;
+	font-size: large;	
+}

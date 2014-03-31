@@ -6,6 +6,7 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'UserProfileCSS.css')}" type="text/css">
 	<title><g:message code="default.show.label" args="[entityName]" /></title>
 </head>
 
@@ -45,16 +46,16 @@
 			</tr>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="user.enabled.label" default="Enabled" /></td>
+				<td valign="top" class="name"><g:message code="user.passwordExpired.label" default="Password Expired" /></td>
 				
-				<td valign="top" class="value"><g:formatBoolean boolean="${userInstance?.enabled}" /></td>
+				<td valign="top" class="value"><g:formatBoolean boolean="${userInstance?.passwordExpired}" /></td>
 				
 			</tr>
 		
 			<tr class="prop">
-				<td valign="top" class="name"><g:message code="user.passwordExpired.label" default="Password Expired" /></td>
+				<td valign="top" class="name"><g:message code="user.enabled.label" default="Enabled" /></td>
 				
-				<td valign="top" class="value"><g:formatBoolean boolean="${userInstance?.passwordExpired}" /></td>
+				<td valign="top" class="value"><g:formatBoolean boolean="${userInstance?.enabled}" /></td>
 				
 			</tr>
 		

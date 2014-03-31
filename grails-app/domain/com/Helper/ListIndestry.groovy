@@ -1,10 +1,9 @@
 package com.Helper
-import com.KickStart.security.UserProfile
+import com.KickStart.security.PostJob;
 
 class ListIndestry {
 
 	String indestryName
-	
 	String toString() {
 		indestryName
 	}

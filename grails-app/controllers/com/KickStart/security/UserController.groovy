@@ -3,12 +3,13 @@ package com.KickStart.security
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-
+import grails.plugin.springsecurity.annotation.Secured
 /**
  * UserController
  * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
  */
 @Transactional(readOnly = true)
+@Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

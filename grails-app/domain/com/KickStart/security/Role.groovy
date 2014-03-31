@@ -7,6 +7,10 @@ class Role {
 	static mapping = {
 		cache true
 	}
+	
+	String toString() {
+		"$authority"
+	};
 
 	static constraints = {
 		authority blank: false, unique: true

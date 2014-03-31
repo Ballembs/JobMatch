@@ -6,6 +6,7 @@
 <head>
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'UserProfileCSS.css')}" type="text/css">
 	<title><g:message code="default.index.label" args="[entityName]" /></title>
 </head>
 
@@ -25,9 +26,9 @@
 			
 				<g:sortableColumn property="accountLocked" title="${message(code: 'user.accountLocked.label', default: 'Account Locked')}" />
 			
-				<g:sortableColumn property="enabled" title="${message(code: 'user.enabled.label', default: 'Enabled')}" />
-			
 				<g:sortableColumn property="passwordExpired" title="${message(code: 'user.passwordExpired.label', default: 'Password Expired')}" />
+			
+				<g:sortableColumn property="enabled" title="${message(code: 'user.enabled.label', default: 'Enabled')}" />
 			
 			</tr>
 		</thead>
@@ -43,9 +44,9 @@
 			
 				<td><g:formatBoolean boolean="${userInstance.accountLocked}" /></td>
 			
-				<td><g:formatBoolean boolean="${userInstance.enabled}" /></td>
-			
 				<td><g:formatBoolean boolean="${userInstance.passwordExpired}" /></td>
+			
+				<td><g:formatBoolean boolean="${userInstance.enabled}" /></td>
 			
 			</tr>
 		</g:each>

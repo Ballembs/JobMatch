@@ -2,7 +2,7 @@
 <head>
 	<title><g:message code="springSecurity.login.title"/></title>
 	<meta name="layout" content="kickstart" />
-
+	<link rel="stylesheet" href="${resource(dir: 'css', file: 'UserProfileCSS.css')}" type="text/css">
 	<g:set var="layout_nomainmenu"		value="${true}" scope="request"/>
 	<g:set var="layout_nosecondarymenu"	value="${true}" scope="request"/>
 </head>
